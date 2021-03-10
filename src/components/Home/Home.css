@@ -1,0 +1,5 @@
+.container-home {
+    Display: grid;
+    Position: relative;
+    grid-template-columns: repeat(1, 3fr);
+}

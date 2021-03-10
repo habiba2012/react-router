@@ -1,9 +1,12 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Card, CardDeck } from 'react-bootstrap';
 import { useHistory } from 'react-router-dom';
+import './Team.css'
 
 const Teams = (props) => {
     console.log(props.team)
-    const {idTeam, strCountry, strLeague, strTeamBadge, strSport} = props.team;
+    const {idTeam, strTeamLogo, strTeam, strSport} = props.team;
     const history = useHistory();
 
     const  handleClick = (teamId) =>{
@@ -13,14 +16,38 @@ const Teams = (props) => {
   
 
  return (
-        <div style={{display:'grid', margin:'20px', padding:'20px', border:'1px solid red', width:'300px'}}>
-            <img width='150px' src={strTeamBadge} alt="" />
-            <p><strong>Sports type</strong> {strSport}</p>
-            <h3>Country {strCountry}</h3>
-            <p>{strLeague}</p>
-            <button onClick={() => handleClick(idTeam)}>Explore</button>
+        
+    <CardDeck>
+      <Card>
+            <Card.Img variant="top" src={strTeamLogo}  />
+            <Card.Body>
+            <Card.Title>{strTeam}</Card.Title>
+            <Card.Text>Sports type {strSport}</Card.Text>
+            </Card.Body>
+      </Card>
+    </CardDeck>
+      /*   <div className='container-team'>
+          
+           <div className='cards'>
+                <div className='card'>
+                    <div className='content'>
+                        <div className="img">
+                            <img src={strTeamLogo} alt="club logo" />
+                        </div>
+                    <div className='details'>
+                    <h1 className='name'>{strTeam}</h1>
+
+                        <p>Sports type {strSport}</p>
+                        <button className='btn-style' onClick={() => handleClick(idTeam)}>Explore</button>
+                    </div>
+                    </div>
+                  
+                </div>
+           </div>
             
-        </div>
+        </div> */
+
+
     );
 };
 
