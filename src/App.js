@@ -8,6 +8,7 @@ import {
 import Home from './components/Home/Home';
 import TeamDetails from './components/TeamDetails/TeamDetails';
 import NavBar from './components/Navbar/NavBar';
+import About from './components/About/About';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
          </Route>
          <Route path='/home'>
             <Home></Home>
+          </Route>
+          <Route path='/about'>
+            <About></About>
           </Route>
           <Route path='/team/:teamId'>
             <TeamDetails></TeamDetails>

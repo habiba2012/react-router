@@ -1,4 +1,49 @@
+.details-banner img {
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.details-info {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #010606;
+    color: white;
+    width: 1000px;
+    margin: auto;
+    height: 280px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    margin-top: -250px;
+}
+
+.details-text {
+    display: inline-block;
+    margin-top: 50px;
+    text-align: left;
+    width: 30%;
+}
+
+.details-img {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    margin: 5px 5px 0 0;
+}
+
+.details-description {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
 .btn-style {
+    margin-top: 30px;
+    margin-left: 130px;
     border-radius: 6px;
     font-size: 16px;
     background: #256ce1;
@@ -12,7 +57,35 @@
 }
 
 .btn-style:hover {
-    background: #fff;
     transition: all 0.2s ease-in-out;
     color: #010606;
+}
+
+.team-social-icon {
+    display: block;
+    margin-top: 50px!important;
+    margin-bottom: 50px;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+    justify-content: center;
+}
+
+.team-social-icon ul li {
+    list-style: none;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    display: inline;
+    padding: 4px;
+}
+
+.logo-team {
+    width: 180px;
+    height: 150px;
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -100%);
 }

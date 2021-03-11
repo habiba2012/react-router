@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Teams from '../Teams/Teams';
-import { GridList } from '@material-ui/core';
+import './Home.css'
 
 const Home = () => {
     const [teams, setTeams] = useState([]);
@@ -10,15 +10,20 @@ const Home = () => {
         .then (data => setTeams(data.teams))
         .catch (error => console.log(error))
     },[] )
+    const bannerCss ={
 
+    }
     return (
-        <div >
+        <div  className='container-home'>
              <div className='cover-img'>
                 <h1>English premium League</h1> 
             </div>
+            <div className='container-team'>
             {
-                teams.map((team,idx) => <Teams className="container-home" key={idx} team={team}></Teams>)
+                teams.map((team,idx) => <Teams className='container-home' key={idx} team={team}></Teams>)
             }
+            </div>
+            
         </div>
     );
 };
