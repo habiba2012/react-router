@@ -32,19 +32,9 @@
     z-index: 11;
 }
 
-.nav-link__hamburger-icon {
-    display: none;
-    color: #fff;
-}
-
-@media screen and (max-width: 768px) {
-    .nav-link__hamburger-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: (-100%, 75%);
-        font-size: 1.8rem;
-        cursor: pointer;
+@media screen and (max-width: 600px) {
+    .nav-link,
+    .nav-link__menu {
+        display: none;
     }
 }

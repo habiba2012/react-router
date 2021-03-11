@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Team.css'
 
 const Teams = (props) => {
-    console.log(props.team)
     const {idTeam, strTeamLogo, strTeam, strSport} = props.team;
     const history = useHistory();
 
@@ -25,9 +24,8 @@ const Teams = (props) => {
                 <Card.Text>Sports type {strSport}</Card.Text>
                 <button className='btn-style' style={{textAlign:'center', margin:'auto'}} onClick={() => handleClick(idTeam)}>Explore <FontAwesomeIcon icon={faArrowRight} /></button>
              </Card.Body>
-            
-        </Card>
-    </CardDeck>
+            </Card>
+        </CardDeck>
          </div>
     );
 };

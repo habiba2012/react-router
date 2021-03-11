@@ -1,5 +1,3 @@
-.container-home {}
-
 .cover-img {
     background-image: url('../../assets/images/stadium.jpg');
     background-position: center;
@@ -36,4 +34,10 @@
     margin-top: 100px;
     margin-left: 15px;
     width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .container-team {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

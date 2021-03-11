@@ -10,9 +10,7 @@ const Home = () => {
         .then (data => setTeams(data.teams))
         .catch (error => console.log(error))
     },[] )
-    const bannerCss ={
-
-    }
+   
     return (
         <div  className='container-home'>
              <div className='cover-img'>

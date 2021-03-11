@@ -15,7 +15,7 @@ const TeamDetails = () => {
         fetch(`https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${teamId}`)
         .then(res => res.json())
         .then(data => setTeamDetails(data.teams[0]))
-    },[])
+    },[teamId])
 
     const backBtn = () => {
        history.push('/home')
@@ -37,13 +37,13 @@ const TeamDetails = () => {
                 <p><i className="fas fa-mars"></i> Gender : {teamDetails.strGender}</p>
                 </div>
                 {
-                teamDetails.strGender == 'Male'? <img src={maleImg} /> : <img src={femaleImg}/>
+                teamDetails.strGender == 'Male'? <img className="maleImg" src={maleImg} /> : <img className="femaleImg" src={femaleImg}/>
                 }
                
            </div>
            <p className="details-description">{teamDetails.strDescriptionEN} {teamDetails.strCountry}</p>
 
-            <button className="btn-style" onClick={backBtn}><i class="fas fa-arrow-left"></i> Back</button>
+            <button className="btn-style" onClick={backBtn}><i className="fas fa-arrow-left"></i> Back</button>
             <div className='team-social-icon'>
                 <ul>
                     <li><a href={`https://${teamDetails.strTwitter}`}target="_blank"><FontAwesomeIcon style={{fontSize:'30px'}} icon={faTwitter} /></a></li>

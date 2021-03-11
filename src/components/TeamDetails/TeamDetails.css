@@ -100,3 +100,32 @@
     transform: translate(-50%, -100%);
     z-index: 2;
 }
+
+@media screen and (max-width: 600px) {
+    .details-banner img {
+        width: 100%;
+    }
+    .details-text {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        width: 100%;
+    }
+    .details-info {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 100vh;
+        margin: 30px;
+    }
+    .details-description {
+        width: 500px;
+        margin: 10px;
+    }
+    .btn-style {
+        text-align: center;
+    }
+    .femaleImg .maleImg {
+        width: 100px!important;
+    }
+}
