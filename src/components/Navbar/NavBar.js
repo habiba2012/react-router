@@ -9,12 +9,12 @@ const NavBar = () => {
             <nav className='nav-link'>
                 <div>
                 <Link  style={{ textDecoration: 'none' }} className='nav-link__logo' to='/'>
-                    <h1>euroLEAGUE</h1>
+                    <h1>englishLEAGUE</h1>
                 </Link>
                 </div>
                 <Link className='nav-link__menu' to='/home'>Home</Link>
                 <Link className='nav-link__menu' to='/about'>About</Link>
-                <Link className='nav-link__menu' to='/contact'>Contact</Link>
+                <Link className='nav-link__menu' to='#'>Contact</Link>
             </nav>
            
         </>

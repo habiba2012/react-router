@@ -26,6 +26,7 @@ const TeamDetails = () => {
             <img src={teamDetails.strTeamBanner} alt="banner"/>
             <img className="logo-team" src={teamDetails.strTeamLogo} alt="logo"/>
             </div>
+            <div className="details-overlay"></div>
            <div className="details-info">
           
                 <div className='details-text'>
@@ -42,7 +43,7 @@ const TeamDetails = () => {
            </div>
            <p className="details-description">{teamDetails.strDescriptionEN} {teamDetails.strCountry}</p>
 
-            <button className="btn-style" onClick={backBtn}>Back</button>
+            <button className="btn-style" onClick={backBtn}><i class="fas fa-arrow-left"></i> Back</button>
             <div className='team-social-icon'>
                 <ul>
                     <li><a href={`https://${teamDetails.strTwitter}`}target="_blank"><FontAwesomeIcon style={{fontSize:'30px'}} icon={faTwitter} /></a></li>

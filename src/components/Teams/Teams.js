@@ -15,45 +15,20 @@ const Teams = (props) => {
         const url = `/team/${teamId}`
         history.push(url);
     }
-  
-
- return (
+  return (
          <div className="container-card">
-         <CardDeck className="card">
-           <Card className='card-content'>
-            <Card.Img variant="top" src={strTeamLogo} style={{width:'100px'}} />
+         <CardDeck>
+           <Card className="card-content">
+            <Card.Img variant="top" src={strTeamLogo} style={{width:'200px', textAlign:'center'}} />
              <Card.Body>
                 <Card.Title>{strTeam}</Card.Title>
                 <Card.Text>Sports type {strSport}</Card.Text>
-                <button className='btn-style' onClick={() => handleClick(idTeam)}>Explore <FontAwesomeIcon icon={faArrowRight} /></button>
+                <button className='btn-style' style={{textAlign:'center', margin:'auto'}} onClick={() => handleClick(idTeam)}>Explore <FontAwesomeIcon icon={faArrowRight} /></button>
              </Card.Body>
             
         </Card>
     </CardDeck>
          </div>
-   
-      /*   <div className='container-team'>
-          
-           <div className='cards'>
-                <div className='card'>
-                    <div className='content'>
-                        <div className="img">
-                            <img src={strTeamLogo} alt="club logo" />
-                        </div>
-                    <div className='details'>
-                    <h1 className='name'>{strTeam}</h1>
-
-                        <p>Sports type {strSport}</p>
-                        <button className='btn-style' onClick={() => handleClick(idTeam)}>Explore</button>
-                    </div>
-                    </div>
-                  
-                </div>
-           </div>
-            
-        </div> */
-
-
     );
 };
 
